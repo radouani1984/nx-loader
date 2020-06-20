@@ -1,0 +1,13 @@
+<div class="card-deck">
+  <div class="card user mx-2 mb-3" *ngFor="let user of users">
+    <img class="card-img-top" [src]="user.avatar" alt="User avatar" />
+    <div class="card-body">
+      <h5 class="card-title" [innerHtml]="fullName(user)"></h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <a href="mailto:{user.email}" class="btn btn-primary">Contact Me</a>
+    </div>
+  </div>
+</div>
