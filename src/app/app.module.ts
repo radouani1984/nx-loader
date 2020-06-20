@@ -13,8 +13,8 @@ import { SpinnerOverlayComponent } from './components/spinner-overlay/spinner-ov
 import { SpinnerOverlayService } from './core/spinner-overlay.service';
 import { LogService } from './core/log.service';
 import { OverlayModule } from '@angular/cdk/overlay';
-import { SpinnerComponent } from './core/spinner/spinner.component';
 import { UrlRepositoryService } from './core/url-repository.service';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 const customInterceptor = [
   {
@@ -30,7 +30,7 @@ const customInterceptor = [
     LogComponent,
     UsersComponent,
     SpinnerOverlayComponent,
-    SpinnerComponent,
+    SpinnerComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, OverlayModule],
   providers: [

@@ -23,7 +23,7 @@ export class NxInterceptorInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
     let spinnerSubscription: Subscription = undefined;
-    if (this.urlRepository.CanLoadSpinner(request.url))
+    // if (this.urlRepository.CanLoadSpinner(request.url))
       spinnerSubscription = this.spinnerOverlayService.spinner$.subscribe();
     return next.handle(request).pipe(
       finalize(() => {
